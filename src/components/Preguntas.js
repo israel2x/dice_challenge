@@ -19,6 +19,7 @@ import {
 const Preguntas = ({ currequestion }) => {
   const [collapse, setCollapse] = useState(false);
   const toggle = () => setCollapse(!collapse);
+  const styletable = { border: "0px solid transparent" };
 
   //console.log(currequestion.data_preguntab);
 
@@ -44,35 +45,45 @@ const Preguntas = ({ currequestion }) => {
 
           <Container>
             {currequestion.data_preguntab.length > 0 ? (
-              <Table style={{ "border-collapse": "collapse" }}>
+              <Table>
                 <tbody>
                   <tr>
-                    <td>1.Pólipos</td>
-                    <td>
-                      A. responsable de la producción de la voz y se ubica
-                      dentro de la laringe, en la parte superior de la tráquea.
+                    <td style={styletable}>
+                      <strong>1.</strong>Pólipos
+                    </td>
+                    <td style={styletable}>
+                      <strong>A.</strong> responsable de la producción de la voz
+                      y se ubica dentro de la laringe, en la parte superior de
+                      la tráquea.
                     </td>
                   </tr>
                   <tr>
-                    <td>2.Nódulos</td>
-                    <td>
-                      B. Son pequeñas tumoraciones parecidas a un callo en las
-                      cuerdas vocales, generalmente simétricas y bilaterales,
-                      que se relacionan con un esfuerzo sostenido de la voz.
+                    <td style={styletable}>
+                      <strong>2.</strong>Nódulos
+                    </td>
+                    <td style={styletable}>
+                      <strong>B.</strong> Son pequeñas tumoraciones parecidas a
+                      un callo en las cuerdas vocales, generalmente simétricas y
+                      bilaterales, que se relacionan con un esfuerzo sostenido
+                      de la voz.
                     </td>
                   </tr>
                   <tr>
-                    <td>3.Parálisis de cuerdas vocales</td>
-                    <td>
-                      C. Son pseudotumores benignos, similares a las ampollas,
-                      que aparecen tras un proceso inflamatorio.
+                    <td style={styletable}>
+                      <strong>3.</strong>Parálisis de cuerdas vocales
+                    </td>
+                    <td style={styletable}>
+                      <strong>C.</strong> Son pseudotumores benignos, similares
+                      a las ampollas, que aparecen tras un proceso inflamatorio.
                     </td>
                   </tr>
                   <tr>
-                    <td>4.Cuerdas vocales</td>
-                    <td>
-                      D. Produce la pérdida de la abducción y la aducción de las
-                      cuerdas vocales.
+                    <td style={styletable}>
+                      <strong>4.</strong>Cuerdas vocales
+                    </td>
+                    <td style={styletable}>
+                      <strong>D.</strong> Produce la pérdida de la abducción y
+                      la aducción de las cuerdas vocales.
                     </td>
                   </tr>
                 </tbody>
