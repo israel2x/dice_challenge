@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/dice_challenge/static/css/main.9c4a52c8.chunk.css",
-    "main.js": "/dice_challenge/static/js/main.9fcad8ad.chunk.js",
-    "main.js.map": "/dice_challenge/static/js/main.9fcad8ad.chunk.js.map",
-    "runtime-main.js": "/dice_challenge/static/js/runtime-main.b5c7ca97.js",
-    "runtime-main.js.map": "/dice_challenge/static/js/runtime-main.b5c7ca97.js.map",
+    "main.css": "/dice_challenge/static/css/main.37219a36.chunk.css",
+    "main.js": "/dice_challenge/static/js/main.cdde85f8.chunk.js",
+    "main.js.map": "/dice_challenge/static/js/main.cdde85f8.chunk.js.map",
+    "runtime-main.js": "/dice_challenge/static/js/runtime-main.849f1159.js",
+    "runtime-main.js.map": "/dice_challenge/static/js/runtime-main.849f1159.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/dice_challenge/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.5e346ace.chunk.js": "/dice_challenge/static/js/2.5e346ace.chunk.js",
-    "static/js/2.5e346ace.chunk.js.map": "/dice_challenge/static/js/2.5e346ace.chunk.js.map",
-    "static/js/3.d88b6480.chunk.js": "/dice_challenge/static/js/3.d88b6480.chunk.js",
-    "static/js/3.d88b6480.chunk.js.map": "/dice_challenge/static/js/3.d88b6480.chunk.js.map",
+    "static/js/2.bec9f8ca.chunk.js": "/dice_challenge/static/js/2.bec9f8ca.chunk.js",
+    "static/js/2.bec9f8ca.chunk.js.map": "/dice_challenge/static/js/2.bec9f8ca.chunk.js.map",
+    "static/js/3.ea23ccb4.chunk.js": "/dice_challenge/static/js/3.ea23ccb4.chunk.js",
+    "static/js/3.ea23ccb4.chunk.js.map": "/dice_challenge/static/js/3.ea23ccb4.chunk.js.map",
     "index.html": "/dice_challenge/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/dice_challenge/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.9c4a52c8.chunk.css.map": "/dice_challenge/static/css/main.9c4a52c8.chunk.css.map",
-    "static/js/2.5e346ace.chunk.js.LICENSE.txt": "/dice_challenge/static/js/2.5e346ace.chunk.js.LICENSE.txt"
+    "static/css/main.37219a36.chunk.css.map": "/dice_challenge/static/css/main.37219a36.chunk.css.map",
+    "static/js/2.bec9f8ca.chunk.js.LICENSE.txt": "/dice_challenge/static/js/2.bec9f8ca.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5c7ca97.js",
+    "static/js/runtime-main.849f1159.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.5e346ace.chunk.js",
-    "static/css/main.9c4a52c8.chunk.css",
-    "static/js/main.9fcad8ad.chunk.js"
+    "static/js/2.bec9f8ca.chunk.js",
+    "static/css/main.37219a36.chunk.css",
+    "static/js/main.cdde85f8.chunk.js"
   ]
 }
