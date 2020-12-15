@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/styles.css"],"names":[],"mappings":"AAAA,UAGE,SAAU,CACV,QAAS,CACT,kBACF,CAEA,cANE,WAQF","file":"main.ae269af8.chunk.css","sourcesContent":["html,\r\nbody {\r\n  height: 100%;\r\n  padding: 0;\r\n  margin: 0;\r\n  background: #23374d;\r\n}\r\n\r\napp {\r\n  height: 100%;\r\n}\r\n"]}
