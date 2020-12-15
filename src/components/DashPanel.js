@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Breadcrumb, BreadcrumbItem } from "reactstrap";
 import Dice from "./Dice";
 import Preguntas from "./Preguntas";
 import DataPreguntas from "../data";
@@ -14,12 +14,18 @@ const DashPanel = () => {
   const [preguntas, setPreguntas] = useState(() => DataPreguntas());
   const [currequestion, setcurreQuestion] = useState(preguntas[0]);
 
+  //const [collapse, setCollapse] = useState(false);
+  //const toggle = () => setCollapse(!collapse);
+
   //Data for dice
+  //#3399ff
   const imgList = [dice1, dice2, dice3, dice4, dice5, dice6];
   const [diceNum, setdiceNum] = useState(1);
   const [diceImg, setDiceImg] = useState(imgList[0]);
 
   const setRandomNum = () => {
+    // setCollapse(false);
+
     const numDice = Math.floor(Math.random() * 6) + 1;
     //    const imgDice = "dice" + numDice;
 
@@ -32,22 +38,32 @@ const DashPanel = () => {
   };
 
   return (
-    <Container style={{ padding: "20px" }}>
-      <Container>
-        <Row>
-          <Col xs="6" sm="6">
-            <Dice
-              diceImg={diceImg}
-              diceNum={diceNum}
-              setRandomNum={setRandomNum}
-            ></Dice>
-          </Col>
-          <Col xs="6" sm="6">
-            <Preguntas currequestion={currequestion}></Preguntas>
-          </Col>
-        </Row>
+    <div style={{ background: "#ffffff" }}>
+      <Breadcrumb>
+        <BreadcrumbItem active>Juego de Preguntas</BreadcrumbItem>
+      </Breadcrumb>
+
+      <Container style={{ padding: "20px", border: "2px solid #ff9999" }}>
+        <Container>
+          <Row>
+            <Col>
+              <Dice
+                diceImg={diceImg}
+                diceNum={diceNum}
+                setRandomNum={setRandomNum}
+              ></Dice>
+            </Col>
+            <Col>
+              <Preguntas
+                currequestion={currequestion}
+                /* toggle={toggle}
+              collapse={collapse} */
+              ></Preguntas>
+            </Col>
+          </Row>
+        </Container>
       </Container>
-    </Container>
+    </div>
   );
 };
 

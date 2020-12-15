@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ListGroup,
   ListGroupItem,
@@ -12,13 +12,20 @@ import {
   Col,
   Row,
   Collapse,
+  Alert,
 } from "reactstrap";
 
 const Preguntas = ({ currequestion }) => {
   const [collapse, setCollapse] = useState(false);
   const toggle = () => setCollapse(!collapse);
 
-  console.log(currequestion.data_preguntab);
+  //console.log(currequestion.data_preguntab);
+
+  useEffect(() => {
+    setCollapse(false);
+  }, [setCollapse]);
+
+  console.log(collapse);
 
   return (
     <div>
@@ -28,7 +35,11 @@ const Preguntas = ({ currequestion }) => {
           <CardTitle tag="h3" style={{ marginBottom: "1rem" }}>
             Pregunta:
           </CardTitle>
-          <CardSubtitle>{currequestion.name}</CardSubtitle>
+          <CardSubtitle>
+            <Alert color="info">
+              <strong>{currequestion.name}</strong>
+            </Alert>
+          </CardSubtitle>
 
           <Container>
             <Row>
@@ -59,7 +70,9 @@ const Preguntas = ({ currequestion }) => {
           <div style={{ marginTop: "10px" }}>
             {currequestion.data_pregunta.map((data_pregunta) => (
               <CardText key={data_pregunta}>
-                <strong>{data_pregunta}</strong>
+                <Alert color="info">
+                  <strong>{data_pregunta}</strong>
+                </Alert>
               </CardText>
             ))}
           </div>
@@ -73,7 +86,7 @@ const Preguntas = ({ currequestion }) => {
           <CardBody>
             {/*  <CardTitle tag="h3">Respuesta:</CardTitle> */}
             <CardSubtitle>
-              <strong>{currequestion.respuesta}</strong>
+              <Alert color="success">{currequestion.respuesta}</Alert>
             </CardSubtitle>
           </CardBody>
         </Collapse>
