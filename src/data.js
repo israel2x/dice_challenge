@@ -24,7 +24,7 @@ function DataPreguntas() {
     },
     {
       name:
-        "3.	Cuáles son los factores que intervienen en la aparición de nódulos",
+        "3.	¿ Cuáles son los factores que intervienen en la aparición de nódulos ?",
       respuesta:
         "Irritantes ambientales (temperatura humedad, polvo, tiza), número de horas de uso de la voz, contaminación acústica, alcohol y tabaco.",
       data_pregunta: [],
@@ -35,7 +35,7 @@ function DataPreguntas() {
     },
     {
       name:
-        "4.	Cuál de las siguientes es una causa de la parálisis de pliegues vocales:",
+        "4.	¿ Cuál de las siguientes es una causa de la parálisis de pliegues vocales:?",
       respuesta: "c.	Lesión en el cuello o el tórax",
       data_pregunta: [
         "a.	Obstrucción respiratoria",
