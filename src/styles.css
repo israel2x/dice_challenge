@@ -3,9 +3,9 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background-color: #ff9999;
+  background: #23374d;
 }
 
-#app {
+app {
   height: 100%;
 }

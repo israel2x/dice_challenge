@@ -38,12 +38,12 @@ const DashPanel = () => {
   };
 
   return (
-    <div style={{ background: "#ffffff" }}>
+    <div style={{ background: "#23374D" }}>
       <Breadcrumb>
         <BreadcrumbItem active>Juego de Preguntas</BreadcrumbItem>
       </Breadcrumb>
 
-      <Container style={{ padding: "20px", border: "2px solid #ff9999" }}>
+      <Container style={{ padding: "20px" }}>
         <Container>
           <Row>
             <Col>
