@@ -14,78 +14,67 @@ const DashPanel = () => {
   const audioRef = useRef(null);
   const reactDice = useRef(null);
 
-  //const [collapse, setCollapse] = useState(false);
-  //const toggle = () => setCollapse(!collapse);
-
-  //Data for dice
-  //#3399ff
-  /* const imgList = [dice1, dice2, dice3, dice4, dice5, dice6];
-  const [diceNum, setdiceNum] = useState(1);
-  const [diceImg, setDiceImg] = useState(imgList[0]);
- */
-  const playMusic = async () => {
-    await audioRef.current.play();
-  };
-
-  const rollAll = () => {
-    playMusic();
-    reactDice.rollAll();
-    console.log("done");
+  const playMusic = () => {
+    audioRef.current.play();
   };
 
   const rollDoneCallback = (num) => {
-    console.log(`You rolled a ${num}`);
     playMusic();
-    //audioRef.current.play();
     setcurreQuestion(preguntas[num - 1]);
   };
 
-  /*  const setRandomNum = () => {
-    // setCollapse(false);
-
-    const numDice = Math.floor(Math.random() * 6) + 1;
-    //    const imgDice = "dice" + numDice;
-
-    const imgDice = imgList[numDice - 1];
-    console.log(numDice);
-
-    rollDoneCallback(numDice);
-    setdiceNum(numDice);
-    setDiceImg(imgDice);
-    //setcurreQuestion(preguntas[numDice - 1]);
-  };
- */
   return (
-    <div style={{ background: "#23374D" }}>
+    <div style={{ background: "#FFA000", height: "100%", width: "100%" }}>
       <Breadcrumb>
         <BreadcrumbItem active>Juego de Preguntas</BreadcrumbItem>
       </Breadcrumb>
 
       <Container style={{ padding: "20px" }}>
-        <Container>
-          <Row>
-            <Col>
-              <div>
-                <ReactDice
-                  numDice={1}
-                  rollDone={rollDoneCallback}
-                  faceColor={"#3399ff"}
-                  dotColor={"#fffff"}
-                  dieSize={"250"}
-                  ref={reactDice}
-                />
-                <audio src={audioDice} ref={audioRef} type="audio/mp3" />
-              </div>
-            </Col>
-            <Col>
-              <Preguntas
-                currequestion={currequestion}
-                /* toggle={toggle}
+        <div
+          style={{
+            padding: "20px",
+            background: "#0E3854",
+            width: "90%",
+            height: "100%",
+            "border-radius": "10px",
+            "justify-content": "center",
+            "align-items": "center",
+            "box-shadow":
+              " 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+          }}
+        >
+          <Container>
+            <Row>
+              <Col>
+                <div
+                  style={{
+                    "text-align": "center",
+                    marginTop: "20px",
+                  }}
+                >
+                  <div>
+                    <ReactDice
+                      numDice={1}
+                      rollDone={rollDoneCallback}
+                      faceColor={"#3399ff"}
+                      dotColor={"#fffff"}
+                      dieSize={"250"}
+                      ref={reactDice}
+                    />
+                  </div>
+                  <audio src={audioDice} ref={audioRef} type="audio/mp3" />
+                </div>
+              </Col>
+              <Col>
+                <Preguntas
+                  currequestion={currequestion}
+                  /* toggle={toggle}
               collapse={collapse} */
-              ></Preguntas>
-            </Col>
-          </Row>
-        </Container>
+                ></Preguntas>
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </Container>
     </div>
   );
