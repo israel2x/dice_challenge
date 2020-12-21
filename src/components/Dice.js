@@ -16,11 +16,6 @@ const Dice = ({ diceImg, diceNum, setRandomNum }) => {
           }}
         />
       </div>
-      <div>
-        <p style={{ textAlign: "center" }}>
-          <strong style={{ color: "#3399ff" }}>{diceNum}</strong>
-        </p>
-      </div>
     </div>
   );
 };

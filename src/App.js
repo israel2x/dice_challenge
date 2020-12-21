@@ -1,6 +1,10 @@
 import DashPanel from "./components/DashPanel";
 function App() {
-  return <DashPanel></DashPanel>;
+  return (
+    <div>
+      <DashPanel />;
+    </div>
+  );
 }
 
 export default App;

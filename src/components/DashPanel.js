@@ -24,57 +24,51 @@ const DashPanel = () => {
   };
 
   return (
-    <div style={{ background: "#FFA000", height: "100%", width: "100%" }}>
+    <div style={{ background: "#FFA000", width: "100%" }}>
       <Breadcrumb>
         <BreadcrumbItem active>Juego de Preguntas</BreadcrumbItem>
       </Breadcrumb>
 
-      <Container style={{ padding: "20px" }}>
-        <div
-          style={{
-            padding: "20px",
-            background: "#0E3854",
-            width: "90%",
-            height: "100%",
-            "border-radius": "10px",
-            "justify-content": "center",
-            "align-items": "center",
-            "box-shadow":
-              " 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-          }}
-        >
-          <Container>
-            <Row>
-              <Col>
-                <div
-                  style={{
-                    "text-align": "center",
-                    marginTop: "20px",
-                  }}
-                >
-                  <div>
-                    <ReactDice
-                      numDice={1}
-                      rollDone={rollDoneCallback}
-                      faceColor={"#3399ff"}
-                      dotColor={"#fffff"}
-                      dieSize={"250"}
-                      ref={reactDice}
-                    />
-                  </div>
-                  <audio src={audioDice} ref={audioRef} type="audio/mp3" />
-                </div>
-              </Col>
-              <Col>
-                <Preguntas
-                  currequestion={currequestion}
-                  /* toggle={toggle}
-              collapse={collapse} */
-                ></Preguntas>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+      <Container
+        style={{
+          padding: "20px",
+          //background: "#0E3854",
+          background: "olive",
+          width: "90%",
+          height: "100%",
+          marginBottom: "20px",
+          borderRadius: "10px",
+          justifyContent: "center",
+          alignItems: "center",
+          boxShadow:
+            " 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 28px 0 rgba(0, 0, 0, 0.19)",
+        }}
+      >
+        <Container>
+          <Row>
+            <Col
+              style={{
+                textAlign: "center",
+                marginTop: "20px",
+                marginBottom: "20px",
+              }}
+            >
+              <ReactDice
+                numDice={1}
+                rollDone={rollDoneCallback}
+                faceColor={"#3399ff"}
+                dotColor={"#fffff"}
+                dieSize={"250"}
+                ref={reactDice}
+              />
+
+              <audio src={audioDice} ref={audioRef} type="audio/mp3" />
+            </Col>
+            <Col>
+              <Preguntas currequestion={currequestion}></Preguntas>
+            </Col>
+          </Row>
+        </Container>
       </Container>
     </div>
   );
