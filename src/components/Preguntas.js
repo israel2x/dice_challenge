@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  ListGroup,
-  ListGroupItem,
   Card,
   CardText,
   CardBody,
@@ -9,8 +7,6 @@ import {
   CardSubtitle,
   Button,
   Container,
-  Col,
-  Row,
   Collapse,
   Alert,
   Table,
@@ -27,7 +23,7 @@ const Preguntas = ({ currequestion }) => {
     setCollapse(false);
   }, [setCollapse]);
 
-  console.log(collapse);
+  //console.log(collapse);
 
   return (
     <div>
