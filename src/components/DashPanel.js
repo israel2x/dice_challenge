@@ -29,7 +29,6 @@ const DashPanel = () => {
         background: "#FFA000",
         width: "100%",
         height: "100%",
-        marginBottom: "20px",
       }}
     >
       <Breadcrumb>
@@ -38,11 +37,11 @@ const DashPanel = () => {
 
       <Container
         style={{
+          marginTop: "20px",
+          marginBottom: "20px",
           padding: "20px",
           background: "#0E3854",
           //background: "olive",
-          width: "90%",
-          height: "100%",
 
           borderRadius: "10px",
           justifyContent: "center",
@@ -56,7 +55,6 @@ const DashPanel = () => {
             style={{
               textAlign: "center",
               marginTop: "20px",
-              marginBottom: "20px",
             }}
           >
             <ReactDice
