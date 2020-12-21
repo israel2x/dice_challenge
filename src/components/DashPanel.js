@@ -24,7 +24,14 @@ const DashPanel = () => {
   };
 
   return (
-    <div style={{ background: "#FFA000", width: "100%" }}>
+    <div
+      style={{
+        background: "#FFA000",
+        width: "100%",
+        height: "100%",
+        marginBottom: "20px",
+      }}
+    >
       <Breadcrumb>
         <BreadcrumbItem active>Juego de Preguntas</BreadcrumbItem>
       </Breadcrumb>
@@ -32,11 +39,11 @@ const DashPanel = () => {
       <Container
         style={{
           padding: "20px",
-          //background: "#0E3854",
-          background: "olive",
+          background: "#0E3854",
+          //background: "olive",
           width: "90%",
           height: "100%",
-          marginBottom: "20px",
+
           borderRadius: "10px",
           justifyContent: "center",
           alignItems: "center",
@@ -44,31 +51,29 @@ const DashPanel = () => {
             " 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 28px 0 rgba(0, 0, 0, 0.19)",
         }}
       >
-        <Container>
-          <Row>
-            <Col
-              style={{
-                textAlign: "center",
-                marginTop: "20px",
-                marginBottom: "20px",
-              }}
-            >
-              <ReactDice
-                numDice={1}
-                rollDone={rollDoneCallback}
-                faceColor={"#3399ff"}
-                dotColor={"#fffff"}
-                dieSize={"250"}
-                ref={reactDice}
-              />
+        <Row>
+          <Col
+            style={{
+              textAlign: "center",
+              marginTop: "20px",
+              marginBottom: "20px",
+            }}
+          >
+            <ReactDice
+              numDice={1}
+              rollDone={rollDoneCallback}
+              faceColor={"#3399ff"}
+              dotColor={"#fffff"}
+              dieSize={"250"}
+              ref={reactDice}
+            />
 
-              <audio src={audioDice} ref={audioRef} type="audio/mp3" />
-            </Col>
-            <Col>
-              <Preguntas currequestion={currequestion}></Preguntas>
-            </Col>
-          </Row>
-        </Container>
+            <audio src={audioDice} ref={audioRef} type="audio/mp3" />
+          </Col>
+          <Col>
+            <Preguntas currequestion={currequestion}></Preguntas>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
