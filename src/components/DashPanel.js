@@ -27,8 +27,6 @@ const DashPanel = () => {
     <div
       style={{
         background: "#FFA000",
-        width: "100%",
-        height: "100%",
       }}
     >
       <Breadcrumb>
@@ -37,41 +35,42 @@ const DashPanel = () => {
 
       <Container
         style={{
-          marginTop: "20px",
-          marginBottom: "20px",
           padding: "20px",
-          background: "#0E3854",
-          //background: "olive",
-
-          borderRadius: "10px",
-          justifyContent: "center",
-          alignItems: "center",
-          boxShadow:
-            " 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 28px 0 rgba(0, 0, 0, 0.19)",
         }}
       >
-        <Row>
-          <Col
-            style={{
-              textAlign: "center",
-              marginTop: "20px",
-            }}
-          >
-            <ReactDice
-              numDice={1}
-              rollDone={rollDoneCallback}
-              faceColor={"#3399ff"}
-              dotColor={"#fffff"}
-              dieSize={"250"}
-              ref={reactDice}
-            />
+        <Container
+          style={{
+            marginTop: "30px",
+            padding: "20px",
+            background: "#0E3854",
+            borderRadius: "10px",
+            boxShadow:
+              " 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 28px 0 rgba(0, 0, 0, 0.19)",
+          }}
+        >
+          <Row>
+            <Col
+              style={{
+                textAlign: "center",
+                marginTop: "20px",
+              }}
+            >
+              <ReactDice
+                numDice={1}
+                rollDone={rollDoneCallback}
+                faceColor={"#3399ff"}
+                dotColor={"#fffff"}
+                dieSize={"250"}
+                ref={reactDice}
+              />
 
-            <audio src={audioDice} ref={audioRef} type="audio/mp3" />
-          </Col>
-          <Col>
-            <Preguntas currequestion={currequestion}></Preguntas>
-          </Col>
-        </Row>
+              <audio src={audioDice} ref={audioRef} type="audio/mp3" />
+            </Col>
+            <Col>
+              <Preguntas currequestion={currequestion}></Preguntas>
+            </Col>
+          </Row>
+        </Container>
       </Container>
     </div>
   );

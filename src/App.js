@@ -1,9 +1,11 @@
 import DashPanel from "./components/DashPanel";
+import "./styles.css";
+
 function App() {
   return (
-    <div>
+    <>
       <DashPanel />;
-    </div>
+    </>
   );
 }
 
